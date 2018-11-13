@@ -45,10 +45,10 @@ def sampler(input, output, var, J, n_iter):
     # Save the data.
     cv2.imwrite(output, noisy_img)
 
-# Need to place this file and io_data.py at the root level, that is, CS5340-project.
+# Need to place this file and io_data.py at code/ folder
 
-input = ["a1/1_noise.txt", "a1/2_noise.txt", "a1/3_noise.txt", "a1/4_noise.txt"]
-output = ["a1/1_denoise_gibbs.png", "a1/2_denoise_gibbs.png", "a1/3_denoise_gibbs.png", "a1/4_denoise_gibbs.png"]
+input = ["../a1/1_noise.txt", "../a1/2_noise.txt", "../a1/3_noise.txt", "../a1/4_noise.txt"]
+output = ["../output/a1/1_denoise_gibbs.png", "../output/a1/2_denoise_gibbs.png", "../output/a1/3_denoise_gibbs.png", "../output/a1/4_denoise_gibbs.png"]
 
 for i in range(len(input)):
     sampler(input[i], output[i], var=2, J=1, n_iter=15)
